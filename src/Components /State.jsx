@@ -2,28 +2,28 @@ import React, { useState } from 'react'
 import '../App.css';
 
 const State = () => {
-    const [color, setColor] = useState("red");
+  const [color, setColor] = useState("red");
 
-    const changeColor = () => {
-        setColor(color === "red" ? "lime" : "red");
-    }
+  const changeColor = () => {
+    setColor(color === "red" ? "lime" : "red");
+  }
 
-    const btntext = (color === "red" ? "Change to lime" : "Change to red");
+  const btntext = (color === "red" ? "Change to lime" : "Change to red");
 
 
-        const myStyle = {
-            color : color,
-            
-        }   
-    return (
-        <div className='App'>
+  const myStyle = {
+    color: color,
 
-            <h1>useState</h1>
-            <h1 style = {myStyle}>My favorite color is {color}!</h1>
-            <button onClick={changeColor}>{btntext}</button>
+  }
+  return (
+    <div className='App'>
 
-        </div>
-    )
+      <h1>useState</h1>
+      <h1 style={myStyle}>My favorite color is {color}!</h1>
+      <button onClick={changeColor}>{btntext}</button>
+
+    </div>
+  )
 }
 
 

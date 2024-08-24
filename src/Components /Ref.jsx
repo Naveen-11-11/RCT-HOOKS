@@ -3,28 +3,28 @@ import React, { useEffect, useRef, useState } from 'react'
 
 // rendering elements by typing application renders 
 const Ref = () => {
-    const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
-    const count = useRef(0);
-  
-    useEffect(() => {
-      count.current = count.current + 1;
-    });
+  const count = useRef(0);
 
-    const changing = ( e ) => {
-        setInputValue(e.target.value); 
-    }
-  
+  useEffect(() => {
+    count.current = count.current + 1;
+  });
+
+  const changing = (e) => {
+    setInputValue(e.target.value);
+  }
+
 
   return (
     <div className='App'>
 
-        <h1> useRef </h1>
+      <h1> useRef </h1>
 
-        <input
+      <input
         type="text"
         value={inputValue}
-        onChange={ changing }
+        onChange={changing}
       />
       <h1>Render Count: {count.current}</h1>
 
